@@ -1,20 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Reprodutor de Música</title>
+    <title>Músicas para decorar - QOCON 1-2024</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="music-player">
-        <audio id="audio-player" controls>
-            <source src="caminho/para/sua/musica.mp3" type="audio/mp3">
+    <div class="container">
+        <h1>QOCON 1-2024 - Músicas para decorar</h1>
+        <div class="playlist">
+            <h2>Lista de Músicas</h2>
+            <ul id="playlist">
+                <li><button data-src="Canção_da_Infantaria_da_Aeronáutica.mp3">1. Canção da Infantaria da Aeronáutica</button></li><br>
+                <li><button data-src="Canção_Fibra_de_Herói_Exército_Brasileiro.mp3">2. Canção Fibra de Herói Exército Brasileiro</button></li><br>
+                <li><button data-src="Canção_da_Intendência_da_Aeronáutica.mp3">3. Canção da Intendência da Aeronáutica</button></li><br>
+                <li><button data-src="Hino_dos_Aviadores.mp3">4. Hino dos Aviadores</button></li><br>
+            </ul>
+            <button id="playAllButton">Reproduzir Todas</button>
+        </div>
+        <audio id="audioPlayer" controls>
             Seu navegador não suporta o elemento de áudio.
         </audio>
-        <button id="play-pause-btn">Play</button>
-        <button id="repeat-song-btn">Repetir Música</button>
-        <button id="repeat-all-btn">Repetir Todas</button>
+        <div class="controls">
+            <button id="prevButton">Anterior</button>
+            <button id="playPauseButton">Play</button>
+            <button id="nextButton">Próximo</button>
+        </div>
+        <div class="progress">
+            <progress id="progressBar" value="0" max="100"></progress>
+        </div>
+        <div id="currentlyPlaying">Nenhuma música selecionada</div>
     </div>
     <script src="script.js"></script>
 </body>
